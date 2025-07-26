@@ -47,4 +47,5 @@ function newGame() {
     scoreGuest = 0;
     homeScore.textContent = 0;
     guestScore.textContent = 0;
+    document.getElementById('result').textContent = "";
 }
