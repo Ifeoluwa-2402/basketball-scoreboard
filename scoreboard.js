@@ -1,49 +1,50 @@
-let score = 0;
+let scoreHome = 0;
+let scoreGuest = 0;
 let homeScore = document.getElementById('home-score');
 let guestScore = document.getElementById('guest-score');
 let winMessage = "";
 let endGame = document.getElementById('end-game');
 function plusOne() {
-    score++;
-    homeScore.textContent = score
+    scoreHome++;
+    homeScore.textContent = scoreHome
 }
 function plusOneGuest() {
-    score++;
-    guestScore.textContent = score
+    scoreGuest++;
+    guestScore.textContent = scoreGuest
 }
 
 function plusTwo() {
-    score += 2;
-    homeScore.textContent = score
+    scoreHome += 2;
+    homeScore.textContent = scoreHome
 }
 
 function plusTwoGuest() {
-    score += 2;
-    guestScore.textContent = score
+    scoreGuest += 2;
+    guestScore.textContent = scoreGuest
 }
 
 function plusThree() {
-    score += 3;
-    homeScore.textContent = score
+    scoreHome += 3;
+    homeScore.textContent = scoreHome
 }
 
 function plusThreeGuest() {
-    score += 3;
-    guestScore.textContent = score
+    scoreGuest += 3;
+    guestScore.textContent = scoreGuest
 }
 
 function message() {
     if (homeScore.textContent > guestScore.textContent)  {
-        return document.getElementById('result').textContent =     'Home Wins!';
+        return document.getElementById('result').textContent =     "Home Wins!";
     } else if (homeScore.textContent < guestScore.textContent) {
-        return document.getElementById('result').textContent = 'You lose!!! Guest Wins!';
-    } else {
+        return document.getElementById('result').textContent = "You lose!!! Guest Wins!";
+    } else (homeScore.textContent === guestScore.textContent) 
         return document.getElementById('result').textContent =  "This game is a tie!";
-    }
 }
 
 function newGame() {
-    score = 0;
+    scoreHome = 0;
+    scoreGuest = 0;
     homeScore.textContent = 0;
     guestScore.textContent = 0;
 }
